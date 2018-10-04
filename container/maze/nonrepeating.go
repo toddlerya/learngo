@@ -29,4 +29,5 @@ func main() {
 	fmt.Println(lengthOfNonRepeatingSubStr("abcdef"))
 	fmt.Println(lengthOfNonRepeatingSubStr("这里是慕课网"))
 	fmt.Println(lengthOfNonRepeatingSubStr("一二三二一"))
+	fmt.Println(lengthOfNonRepeatingSubStr("黑化肥挥发发灰会花飞灰化肥挥发发黑会飞花"))
 }
