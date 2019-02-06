@@ -24,13 +24,12 @@ func tryDefer() {
 }
 
 func writeFile(filename string) {
-	// file, err := os.Create(filename)
 	file, err := os.OpenFile(filename, os.O_EXCL|os.O_CREATE, 0666)
 	if err != nil {
 		if pathError, ok := err.(*os.PathError); !ok {
 			panic(err)
 		} else {
-			fmt.Printf("%s, %s, %s\n", pathError.Op, pathError.Path, pathError.Err)
+			fmt.Printf("ERROR: %s, %s, %s\n", pathError.Op, pathError.Path, pathError.Err)
 		}
 		return
 	}
