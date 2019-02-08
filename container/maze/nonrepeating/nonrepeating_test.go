@@ -28,7 +28,7 @@ func TestSubStr(t *testing.T) {
 	for _, tt := range tests {
 		acutal := lengthOfNonRepeatingSubStr(tt.s)
 		if acutal != tt.ans {
-			t.Errorf("go %d for input %s; expected %d", acutal, tt.s, tt.ans)
+			t.Errorf("got %d for input %s; expected %d", acutal, tt.s, tt.ans)
 		}
 	}
 }
@@ -41,7 +41,7 @@ func BenchmarkSubStr(b *testing.B) {
 	b.Logf("len(s) = %d", len(s))
 	ans := 8
 
-	b.ResetTimer() 
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		acutal := lengthOfNonRepeatingSubStr(s)
 		if acutal != ans {
